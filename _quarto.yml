@@ -9,29 +9,21 @@ execute:
   freeze: auto
 
 website:
-  title: "Blitz Bearcat"
+  title: "Reading The Data"
   description: "M.S. Data Science portfolio — Willamette University"
-  site-url: https://your_github_username.github.io
+  site-url: https://reading-the-data-capstone
   navbar:
     right:
       - href: index.qmd
         text: Home
-      - href: capstone.qmd
-        text: Capstone
-      - href: projects.qmd
-        text: Projects
-      - href: resume.qmd
-        text: Resume
-      - href: about.qmd
-        text: About
-      - icon: github
-        href: https://github.com/your_github_username
-        aria-label: GitHub
-      - icon: linkedin
-        href: https://linkedin.com/in/your_github_username
-        aria-label: LinkedIn
+      - href: data.qmd
+        text: The Data
+      - href: analysis.qmd
+        text: Our Analysis
+      - href: findings.qmd
+        text: Findings
   page-footer:
-    left: "© 2026 Blitz Bearcat"
+    left: "© 2026 Reading the Data"
 
 format:
   html:

@@ -1,59 +1,28 @@
 ---
-title: "Blitz Bearcat"
-subtitle: "M.S. Data Science Candidate · Willamette University"
-image: images/profile.png
+title: "Reading the Data: An Analysis of Willamette University Library’s E-Resource Usage"
+subtitle: "Sophia Rabbanian · Emily Strickland · Tiffany Truong"
+image: images/wuLibrary.png
 about:
-  template: trestles
+  template: marquee
   image-shape: round
-  image-width: 16em
+  image-width: 20em
   links:
-    - icon: github
-      text: GitHub
-      href: https://github.com/your_github_username
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/your_github_username
-    - icon: envelope
-      text: Email
-      href: mailto:you@willamette.edu
     - icon: file-earmark-pdf
-      text: Resume
-      href: resume.qmd
+      text: Sophia's Portfolio
+      href: https://sophiarabb.github.io
+    - icon: file-earmark-pdf
+      text: Emily's Portfolio
+      href: https://emvstrick.github.io
+    - icon: file-earmark-pdf
+      text: Tiffany's Portfolio
+      href: https://tiffanytruong26.github.io
 ---
 
-I build data pipelines and turn messy data into decisions people can act on.
-Right now I am finishing my M.S. in Data Science at **Willamette University**,
-where my capstone [predicts \[your one-line problem\]](capstone.qmd) for
-\[your stakeholder\].
+## Abstract
+Willamette University’s Library has a host of online journals from a handful of publishers. As Willamette changes and the library reevaluates its needs, the librarians are needing to consider which electronic materials to maintain, and which to let go. With no recent way to analyze the usage patterns of journals and articles, we performed analysis on usage data in tandem with enrollment data to make actionable suggestions on how to fairly maintain the available online resources. From our analysis, we have found that journal usage ebbs when school is not in session, and that the Spring and Fall terms generally have higher usage, with Fall having the most consistent patterns of high-usage. In the most recent school year, usage has decreased by 29%, possibly due to an increase in LLMs as a research tool.
 
-I care about \[topics you actually care about — e.g. housing, health equity,
-sports analytics\], reproducible workflows, and explaining a model to the person
-who has to trust it.
+## Problem
+Like many smaller universities, Willamette is undergoing changes that impact all facets of the University. In recent years, the library has needed an avenue to understand the usage of the online resources they provide to the community so they can effectively support student and staff needs in their learning and research. This project explores usage patterns in regards to subject matter, semester, and department, and will ultimately strive to make suggestions on which resources to prioritize and which resources are not as important. The final decisions on resource allocation will be decided by WU librarians. Our analysis should not be a hard-line for decision making.
 
-**Currently looking for** \[data analyst / data scientist / ML engineer\] roles
-starting \[month year\]. [Get in touch](about.qmd) or grab my
-[resume](resume.qmd).
-
----
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-### 🎓 Education
-M.S. Data Science
-Willamette University, 2026
-:::
-
-::: {.g-col-12 .g-col-md-4}
-### 🛠️ Toolkit
-R · Python · SQL
-Quarto · Git · \[add yours\]
-:::
-
-::: {.g-col-12 .g-col-md-4}
-### 📍 Based in
-Salem, OR
-Open to \[remote / relocation\]
-:::
-
-:::
+## Impact & Stakeholders
+This project could make positive impacts for the Willamette community as a whole, as the Library’s electronic materials are an available resource for everyone in the WU community. The largest stakeholder and those most impacted by this project are the library staff and librarians, as they will have an avenue to evaluate the needs of students and the demand of various journals and their topics compared to the respective sizes of departments and majors. With the library aiming to optimize their resources, students and other members of the community will continue to have access to necessary academic journals and articles, while the library ensures that every department is served equitably and fairly.
