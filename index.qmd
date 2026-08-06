@@ -26,3 +26,24 @@ Like many smaller universities, Willamette is undergoing changes that impact all
 
 ## Impact & Stakeholders
 This project could make positive impacts for the Willamette community as a whole, as the Library’s electronic materials are an available resource for everyone in the WU community. The largest stakeholder and those most impacted by this project are the library staff and librarians, as they will have an avenue to evaluate the needs of students and the demand of various journals and their topics compared to the respective sizes of departments and majors. With the library aiming to optimize their resources, students and other members of the community will continue to have access to necessary academic journals and articles, while the library ensures that every department is served equitably and fairly.
+
+## Explore the Project
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### [The Data](data.qmd)
+Where the journal usage and enrollment data came from, how it was cleaned and normalized, and the ethical considerations behind using it.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Our Analysis](analysis.qmd)
+The methods behind the analysis, how we validated the data, and the figures showing usage over time and across departments.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Findings](findings.qmd)
+What the patterns mean for the library, our recommendations, the limitations of this work, and where it could go next.
+:::
+
+:::
