@@ -7,29 +7,32 @@ about:
   image-width: 12em
 ---
 
-## Hi, I'm Blitz 👋
+## What Our Analysis Means For the Stakeholders
 
-The home page is the ten-second version. This is the longer story — write it in
-your own voice.
+Analysis of usage patterns over the course of time indicates that while usage of e-resources often follows the ebb and flow of semester terms; on a whole, usage of e-resources appears to be declining. These patterns suggest shifting student research habits and represent a larger need to understand how student research habits are evolving and classroom practices regarding what and how resources are discussed and promoted. 
 
-I came to data science from \[your path: a major, a job, a question that would
-not leave you alone\]. What keeps me here is \[the part of the work you genuinely
-enjoy — the modeling, the wrangling, the moment a chart makes something click\].
+Similarly, variations in the number of requests for journals associated with different academic disciplines allow us to explore how journal topic areas can be a factor to consider when discussing which journal packages to invest in. Journals categorized under Women’s & Gender Studies (WGS) were a significant outlier given the enrollment size of the WGS major. Our existing hypotheses for these sections include:
 
-At Willamette my focus has been \[your emphasis: forecasting, causal inference,
-NLP, data engineering, ...\]. My [capstone](capstone.qmd) is where that comes
-together.
+1. The popularity of the topic
 
-### Beyond the terminal
+2. Cross-disciplinary use of these journals across majors and schools
 
-- 🌲 \[Something human — a hobby, a place, a cause.\]
-- 📚 \[Currently reading / learning / building.\]
-- 🎯 \[What you want to be doing in two years.\]
+3. Usage from other campus organizations such the Gender Resource & Advocacy Center (GRAC).
 
-### Get in touch
 
-I'm happy to talk about \[data work, collaborations, roles\].
+While our findings indicate that *enrollment based on academic disciplines is not a strong indicator of journal usage*, the alignment of journal topic areas with overall student academic interests, organizational needs may be a necessary factor to consider. For example, if our hypotheses do hold true, Willamette’s libraries stand to benefit from investing in journal packages that support journals of popular topics or topics that can be relevant to multiple disciplines or organizations on campus. 
 
-- ✉️ [you@willamette.edu](mailto:you@willamette.edu)
-- 💼 [LinkedIn](https://linkedin.com/in/your_github_username)
-- 💻 [GitHub](https://github.com/your_github_username)
+### Recommendation
+
+- Conduct further research into changing student research habits. Questions to potentially continue researching:
+
+  - What are tools that students are using to conduct research? Are they using library resources or other tools?
+
+  - What tools are students exposed to in the classroom? 
+
+- Conduct further research into topics that students are interested in:
+
+  - Potentially identifying topics that are interdiscplinary and cover a breadth of departments
+
+  - Considering what campus organizations may also utilize e-resources (e.g. Gender Resource Advocacy Center)
+
