@@ -16,7 +16,7 @@ The Willamette Library usage requests data was supplied to us by a contact at th
 
 ##### Enrollment Data
 
-The enrollment data is publicly available on Willamette University’s website and contains each semester’s enrollment for every major broken down by sex and year in school. We chose the timespan to match the time for which we have journal requests data. This was from the Summer 2023-Fall 2025 (Spring 2026 data was not yet available at the time of our data ingestion). 
+The enrollment data is publicly available on [Willamette University’s Factbooks website](https://legacy.willamette.edu/ir/factbooks/) and contains each semester’s enrollment for every major broken down by sex and year in school. We chose the timespan to match the time for which we have journal requests data. This was from the Summer 2023-Fall 2025 (Spring 2026 data was not yet available at the time of our data ingestion). 
 
 <br> <br>
 
