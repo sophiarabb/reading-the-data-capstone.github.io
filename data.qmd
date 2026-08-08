@@ -1,84 +1,63 @@
 ---
-title: "Capstone: [Your Capstone Title]"
-subtitle: "A one-sentence hook: what you built and who it helps."
-date: 2026-07-27
-image: projects/capstone/featured.svg
-categories: [capstone, machine-learning, R]
+title: "Our Data"
+subtitle: "Inside the ingestion, wrangling and transforming processes."
 toc: true
 ---
 
-::: {.callout-note appearance="simple"}
-This is the anchor of your portfolio. A hiring manager who reads only one page
-should read this one. Replace every bracketed placeholder, then delete this note.
-:::
+## The Sources
 
-## The one-liner
+Our data comes from two sources: journal request data, and enrollment data.
 
-> We integrated **\[data sources\]** into **\[dataset\]** so that
-> **\[stakeholder\]** can **\[decision they can now make\]**.
+##### Journal Data
 
-**Role:** \[e.g. I led the data pipeline and validation.\]
-**Team:** \[solo, or name + link teammates.\]
-**Repo:** [github.com/your_github_username/your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
+The Willamette Library usage requests data was supplied to us by a contact at the WU Library. It contained 7 different spreadsheets from 5 different publishers: Oxford University, Sage, Springer Nature, University of Chicago and Taylor & Francis. Each of these consists of monthly data for the number of unique journal requests and the total number of journal requests. The unique item request only counts how many unique journals or articles within each journal was requested. Ultimately, we used the unique requests metric for our analysis. This data spans from July 2023 - March 2026. 
 
-## The question
+<br>
 
-What problem were you solving, and why does it matter to a real stakeholder?
-Two or three sentences. No jargon a hiring manager would have to look up.
+##### Enrollment Data
 
-## The data
+The enrollment data is publicly available on Willamette University’s website and contains each semester’s enrollment for every major broken down by sex and year in school. We chose the timespan to match the time for which we have journal requests data. This was from the Summer 2023-Fall 2025 (Spring 2026 data was not yet available at the time of our data ingestion). 
 
-Where the data came from, how much of it, and the one hard thing about it
-(missingness, joins across sources, scale, privacy). This is your data
-engineering story — the part the repo link backs up.
+<br> <br>
 
-## The approach
+## The Wrangling
 
-Your method at portfolio depth: shorter than your M4 write-up, longer than a
-tweet. What did you try, what did you keep, and why.
+##### Journal Data
 
-## Findings
+Since we wanted to analyze the relationship between enrollment in specific majors and the journal requests for journals in the same subject matter, we needed to classify each of the journals into their subject. This process was done manually. This proved to be challenging because there is some nuance as to what subject each journal belongs to. Journals were labeled with their closest related subject based on our discretion, which was then checked for accuracy by a WU librarian. The data was then all compiled into one file, ensuring that all of the month columns lined up, as different publishers have data for slightly different time periods. 
 
-Lead with your best figure or your architecture diagram.
+Since we are curious about looking at enrollment and the enrollment data is only as granular as each term, we summed each month for the journal data to also only consider the term. To do this we needed to assign each month to a term, which we did using the following logic:
 
-![Replace with your key result or system diagram.](projects/capstone/featured.svg){fig-alt="Placeholder capstone figure" width="90%"}
+| Term   | Months          |
+|--------|-----------------|
+| Fall   | August-December |
+| Spring | January-April   |
+| Summer | May-July        |
 
-State the finding in plain language, then the caveat. Sparse and true beats
-full and shaky.
+<br>
 
-## The full write-up
+##### Enrollment Data
 
-Pick the option that matches where your write-up lives, keep one, delete the rest.
+The enrollment data was stored as an .html online and we had to be downloaded as a .pdf. Before ingesting this data, we needed to write a script to read the data from the .pdfs to .csvs. We then combined all of this data into one file for ease in ingestion. We did not need to analyze the enrolled major counts by sex so we summed the M and F counts together to get the total count per grade for each major. We also dropped the supplied total counts in favor of creating our own calculations. Additionally, since we do not have enrollment data for the summer semesters, we had each summer adopt the previous spring’s enrollment data, as we assume that very few (if any) students are declaring their major in May-July. Once these steps were completed, the data was ready to be transformed into the new schema.
 
-::: {.panel-tabset}
+<br> <br>
 
-### A · Native Quarto
+## The Schema
 
-If your write-up is a `.qmd`, copy it into `projects/capstone/index.qmd` and
-link it, or fold its sections directly into this page. Set `eval: false` (or
-rely on `freeze`) on any chunk that needs data the public repo does not contain.
+The data was downloaded and ingested into a PostgreSQL database where it was then loaded into staging tables. The new tables were then created and the data was inserted from the staging tables into the new organized tables, which contained appropriate foreign and primary keys to ensure ease in using joins for our analysis. Our organized schema can be seen below:
 
-### B · Embedded PDF
+![Entity-relationship diagram](images/erd.png){width=70%}
 
-```markdown
-[Download the write-up (PDF)](projects/capstone/writeup.pdf){.btn .btn-primary}
+<br> <br>
 
-<iframe src="projects/capstone/writeup.pdf" width="100%" height="800px"
-  style="border: 1px solid #ddd;"></iframe>
-```
+## Analysis Ready
 
-### C · Published Google Doc
+Once the data was in this format in the Postgres database, we exported each of the tables into .csv files so that we could download them into our analysis environments. These were in a shared google drive. This allowed us to easily perform our analysis asynchronously without having to re-wrangle the data every time we returned to the coding environment.
 
-```markdown
-[Read the full write-up](https://docs.google.com/document/d/e/XXXX/pub){.btn .btn-primary}
+<br> <br>
 
-<iframe src="https://docs.google.com/document/d/e/XXXX/pub?embedded=true"
-  width="100%" height="800px" style="border: 1px solid #ddd;"></iframe>
-```
+## Complete Pipeline
 
-:::
+![Complete Data Pipeline](images/pipeline.png){width=70%}
 
-## Dig deeper
-
-- 📦 **Code & pipeline:** [your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
-- 📊 **Slides / poster:** \[link if you have one\]
+After the process described above, the data was in the "Stored in shared google drive" stage, and is available for analysis.
