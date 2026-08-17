@@ -29,7 +29,7 @@ There is no ground truth for what "correct" usage looks like, so validation focu
 
 ## Figure 1: Journal Usage by Month, 2023-2026
 
-![](images/chart4_poster.png){fig-alt="Line chart of unique item requests per month from July 2023 to February 2026, with a 12 month trailing mean showing a downward trend."}
+![](images/figure1.png){fig-alt="Line chart of unique item requests per month from July 2023 to February 2026, with a 12 month trailing mean showing a downward trend."}
 
 *Journal usage by month, July 2023 to February 2026. Unique item requests per month, summed across the 1,493 journals reporting in every month of the window (n = 1,493). The red line is the 12 month trailing mean. March 2026 is excluded because only one of five publishers reported that month.*
 

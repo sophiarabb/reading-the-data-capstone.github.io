@@ -22,6 +22,8 @@ website:
         text: Our Analysis
       - href: findings.qmd
         text: Findings
+      - href: deliverables.qmd
+        text: Deliverables
   page-footer:
     left: "© 2026 Reading the Data"
 
