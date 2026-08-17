@@ -61,7 +61,6 @@ Statistics (STAT) ranks fourth in requests per student, which supports the idea 
 
 *Linear model of journal requests and entollment, broken down by each major and each term. Total requests aggregated each department and each term. Line of best fit trends upward with a slope of 0.85 and an intercept of -42.*
 
-
 Figure 3 shows the relationship between enrollment and usage requests, total for each term and broken down by department/major. While there is a high amount of noise in this graphic, the upward trend remains noteworthy.
 
 The slope of the line of best fit is 0.8503, meaning that for each additional student enrolled in that major, we expect journal usage to increase by an average of 0.85 requests. The slope was statistically significant (p < 0.001), indicating strong evidence that the relationship between enrollment and journal usage requests is not likely due to chance. The intercept (-42.03) is unexpected in the context of our problem. It suggests that an enrollment of 0 in a given term would be expected to have a negative number of usage requests, which is not possible.
