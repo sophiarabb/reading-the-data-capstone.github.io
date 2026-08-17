@@ -5,14 +5,14 @@ subtitle: "Final Project Poster and Write-Up"
 
 ## Final Poster
 
-[Download the poster (PDF)](projects/capstone/finalPoster.pdf){.btn .btn-primary}
+[Download the poster (PDF)](files/finalPoster.pdf){.btn .btn-primary}
 
 <iframe src="projects/capstone/0802posterDRAFT.pdf" width="100%"
   style="aspect-ratio: 4 / 4; border: 1px solid #ddd;"></iframe>
 
 ## The full poster
 
-[Download the write-up (PDF)](projects/capstone/finalWriteUp.pdf){.btn .btn-primary}
+[Download the write-up (PDF)](images/finalWriteUp.pdf){.btn .btn-primary}
 
 <iframe src="projects/capstone/m4DRAFTwriteup.pdf" width="100%" height="800px"
   style="border: 1px solid #ddd;"></iframe>
