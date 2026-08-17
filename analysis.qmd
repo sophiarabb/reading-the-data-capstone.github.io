@@ -54,3 +54,17 @@ Women's & Gender Studies (WGS) is a large outlier, with an average of 3.88 major
 Psychology (PSYC) and Sociology (SOC) follow WGS with the next highest requests per enrolled student, with averages of 96.12 and 36.75 students per semester and 5,339 and 2,028 total requests respectively. These are much larger departments by enrollment and also have a higher volume of journals, both ranking in the top 5 for journal count. Public Health (PHEAL), Biology (BIO), and Environmental Science (ENVS) make up the rest of the top 5 departments by journal count and also have consistently high enrollment.
 
 Statistics (STAT) ranks fourth in requests per student, which supports the idea that statistical methods are used across many other disciplines. The same can be said for other departments, so it is reasonable to assume that requests were made by a mix of students from different departments and other members of the Willamette community. Overall, this figure shows that enrollment is not a strong indicator of journal usage, given the variation and the volume of out-of-major journal usage by students, faculty, and staff alike.
+
+## Figure 3: Usage Requests by Enrollment
+
+![](images/figure3.png){fig-alt="Linear model plot of journal requests by enrollment in each major and each term. Total requests aggregated."}
+
+Figure 3 shows the relationship between enrollment and usage requests, total for each term and broken down by department/major. While there is a high amount of noise in this graphic, the upward trend remains noteworthy.
+
+The slope of the line of best fit is 0.8503, meaning that for each additional student enrolled in that major, we expect journal usage to increase by an average of 0.85 requests. The slope was statistically significant (p < 0.001), indicating strong evidence that the relationship between enrollment and journal usage requests is not likely due to chance. The intercept (-42.03) is unexpected in the context of our problem. It suggests that an enrollment of 0 in a given term would be expected to have a negative number of usage requests, which is not possible.
+
+The Pearson’s correlation coefficient is 0.666, which indicates a strong positive correlation between enrollment in a particular major for a given semester and requests for journals in that major in the same semester. Although we cannot conclude from this that higher enrollment causes higher usage, this relationship is present and notable.
+
+The R-squared statistic is 0.4437, meaning that about 44% of the variation in the usage requests can be explained by enrollment. The remaining ~56% of variation is likely due to other factors that were discussed alongside Figure 2, such as out-of-major requests, having journal-heavy classes, or usage by others in the Willamette community.
+
+While this overall trend is strong, there is substantial variability around the line for individual department-term combinations. The residual standard error is 145.2, meaning actual usage requests for a given department in a given term can differ from the model’s prediction by a wide margin, which is consistent with the visible scatter in Figure 3.
